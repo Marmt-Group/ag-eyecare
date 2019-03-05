@@ -1,0 +1,283 @@
+/**! Custom Styles Go Here (for easy template updating) **/
+
+.add-glasses-1 {
+  position: relative;
+  overflow: visible !important;
+}
+
+.add-glasses-1:after {
+  content: '';
+  position: absolute;
+  top: -250px;
+  right: 0;
+  z-index: 1;
+  width: 50%;
+  max-width: 600px;
+  height: 379px;
+  background-image: url('../img/glasses-1.png');  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.add-glasses-2 {
+  position: relative;
+  overflow: visible !important;
+}
+
+.add-glasses-2:after {
+  content: '';
+  position: absolute;
+  top: -250px;
+  right: 0;
+  z-index: 1;
+  width: 50%;
+  max-width: 600px;
+  height: 379px;
+  background-image: url('../img/glasses-2.png');  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transform: rotate(4deg);
+}
+
+.add-glasses-3 {
+  position: relative;
+  overflow: visible !important; 
+}
+
+.add-glasses-3:after {
+  content: '';
+  position: absolute;
+  top: -175px;
+  left: 0;
+  z-index: 1;
+  width: 50%;
+  max-width: 600px;
+  height: 379px;
+  background-image: url('../img/glasses-3.png');  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; 
+  transform: rotate(6deg);
+}
+
+.gradient--active .bg--primary {
+	background: #62c7cf;
+	background: -webkit-linear-gradient(to right, #008c74 0%, #004c66 100%);
+	background: linear-gradient(to right, #008c74 0%, #004c66 100%);
+}
+
+.gradient--active [data-overlay].bg--primary::before {
+	background: #62c7cf;
+	background: -webkit-linear-gradient(to right, #008c74 0%, #004c66 100%);
+	background: linear-gradient(to right, #008c74 0%, #004c66 100%);
+}
+
+.nav-bar .logo {
+  width: 100%;
+  max-width: 400px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .nav-bar .logo {
+    max-width: 300px;
+  }
+}
+
+.nav-bar svg#logo path {
+  fill: white !important;
+}
+
+@media (max-width: 480px) {
+  .nav-bar svg#logo g {
+    display: none;
+  }
+}
+
+footer svg#logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  max-width: 100%;
+  margin-right: 0.390625em;
+  margin-bottom: 1.5625em;
+}
+
+.section-hero-1 .background-image-holder {
+  background-position: center left !important;
+}
+
+/* ANGLES */
+.section-hero-1,
+.section-snippet-about {
+  transform: skewY(-4deg);
+  transform-origin: top left;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.imageblock .imageblock__content,
+.section-snippet-about .container,
+.section-hero-1 .container {
+  transform: skewY(4deg);
+}
+
+.imageblock .imageblock__content img {
+  bottom: -18px;
+}
+
+.service-element {
+  transform: skewY(-4deg);
+}
+
+.service-element > .hover-element__initial {
+  transform: skewY(4deg);
+}
+
+.section-instafeed {
+  position: relative;
+  z-index: 1;
+  background: #242A2D;
+  transform: skewY(-4deg); 
+  transform-origin: bottom left;
+}
+
+.section-instafeed h6 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.section-instafeed h6 a {
+  color: #f5f5f5;
+}
+
+.section-instafeed h6 a:hover {
+  text-decoration: underline;
+}
+
+.section-instafeed h6 i {
+  font-size: 1.25em;
+}
+
+.section-instafeed .instafeed-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.section-instafeed .instafeed-list .instafeed-item-container {
+  position: relative;
+  width: calc(33.3333% - 10px);
+  height: 300px;
+  margin: 5px;
+  border: 1px solid #363c3f;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .section-instafeed .instafeed-list .instafeed-item-container {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 550px) {
+  .section-instafeed .instafeed-list .instafeed-item-container {
+    width: 100%;
+  }
+}
+
+.section-instafeed .instafeed-list .instafeed-item {
+  position: relative;
+  transform-origin: top right;
+  width: 100%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transform: skewY(4deg); 
+  transition: all 300ms ease;
+}
+
+#map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  transform: skewY(-4deg);
+  transform-origin: bottom left;
+}
+
+#map .marker {
+  background-image: url('../img/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: skewY(4deg);
+}
+
+#map .mapboxgl-popup {
+  max-width: 250px;
+}
+
+#map .mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  transform: skewY(4deg);
+}
+
+#map .mapboxgl-popup-close-button {
+	padding: 5px 10px;
+}
+
+footer.bg--dark {
+  position: relative;
+  z-index: 1;
+  background: #62c7cf;
+	background: -webkit-linear-gradient(to right, #008c74 0%, #004c66 100%);
+	background: linear-gradient(to right, #008c74 0%, #004c66 100%);
+}
+
+footer:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-4deg); 
+  transform-origin: bottom left;
+  background: #62c7cf;
+	background: -webkit-linear-gradient(to right, #008c74 0%, #004c66 100%);
+	background: linear-gradient(to right, #008c74 0%, #004c66 100%);
+} 
+
+.tv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    transform: skewY(4deg);
+    transform-origin: top left;
+}
+.tv .screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77777778vh;
+    min-width: 100%;
+    height: 56.25vw;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    opacity: 0;
+}
+.tv .screen.active {
+    opacity: 1;
+}
