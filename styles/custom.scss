@@ -1,5 +1,4 @@
 /**! Custom Styles Go Here (for easy template updating) **/
-
 .add-glasses-1 {
   position: relative;
   overflow: visible !important;
@@ -14,7 +13,7 @@
   width: 50%;
   max-width: 600px;
   height: 379px;
-  background-image: url('../img/glasses-1.png');  
+  background-image: url('./img/glasses-1.png');  
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -34,7 +33,7 @@
   width: 50%;
   max-width: 600px;
   height: 379px;
-  background-image: url('../img/glasses-2.png');  
+  background-image: url('./img/glasses-2.png');  
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -55,7 +54,7 @@
   width: 50%;
   max-width: 600px;
   height: 379px;
-  background-image: url('../img/glasses-3.png');  
+  background-image: url('./img/glasses-3.png');  
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; 
@@ -210,7 +209,7 @@ footer svg#logo {
 }
 
 #map .marker {
-  background-image: url('../img/mapbox-icon.png');
+  background-image: url('./img/mapbox-icon.png');
   background-size: cover;
   width: 50px;
   height: 50px;
