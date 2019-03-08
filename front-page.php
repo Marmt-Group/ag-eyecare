@@ -65,8 +65,8 @@ get_header();
             <div class="row">
             <div class="col-sm-12 text-center">
                 <?php if ( get_field('optometry_guide_header_text')) : ?>
-                    <? the_field('optometry_guide_header_text'); ?>
-                <? endif; ?>
+                    <?php the_field('optometry_guide_header_text'); ?>
+                <?php endif; ?>
             </div>
             </div>
 
@@ -75,12 +75,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_1_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_1_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_1_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_1_text')) : ?>
-                        <p><? the_field('optometry_guide_block_1_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_1_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_1_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_1_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">
@@ -93,12 +93,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_2_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_2_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_2_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_2_text')) : ?>
-                        <p><? the_field('optometry_guide_block_2_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_2_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_2_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_2_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">
@@ -111,12 +111,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_3_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_3_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_3_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_3_text')) : ?>
-                        <p><? the_field('optometry_guide_block_3_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_3_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_3_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_3_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">
@@ -129,12 +129,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_4_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_4_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_4_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_4_text')) : ?>
-                        <p><? the_field('optometry_guide_block_4_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_4_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_4_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_4_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">
@@ -147,12 +147,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_5_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_5_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_5_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_5_text')) : ?>
-                        <p><? the_field('optometry_guide_block_5_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_5_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_5_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_5_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">
@@ -165,12 +165,12 @@ get_header();
                 <div class="hover-element service-element hover--active">
                 <div class="hover-element__initial">
                     <?php if ( get_field('optometry_guide_block_6_header')) : ?>
-                        <h3><? the_field('optometry_guide_block_6_header'); ?></h3>
-                    <? endif; ?>
+                        <h3><?php the_field('optometry_guide_block_6_header'); ?></h3>
+                    <?php endif; ?>
                     <?php if ( get_field('optometry_guide_block_6_text')) : ?>
-                        <p><? the_field('optometry_guide_block_6_text'); ?></p>
-                        <a class="link-underline" href="<? the_field('optometry_guide_block_6_url'); ?>">Tell Me More</a>
-                    <? endif; ?>
+                        <p><?php the_field('optometry_guide_block_6_text'); ?></p>
+                        <a class="link-underline" href="<?php the_field('optometry_guide_block_6_url'); ?>">Tell Me More</a>
+                    <?php endif; ?>
                 </div>
                 <div class="hover-element__reveal" data-overlay="7">
                     <div class="background-image-holder">

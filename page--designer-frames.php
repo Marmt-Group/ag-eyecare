@@ -8,6 +8,10 @@
 */
 
 get_header();
+
+global $post;
+$post_slug=$post->post_name;
+var_dump($post_slug);
 ?>
 
 <body <?php body_class('gradient--active'); ?>>
