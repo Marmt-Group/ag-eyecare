@@ -12,21 +12,28 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<div class="error-404 not-found">
-				<header class="page-header">
+<div class="main-container">
+	<section class="height-100 bg--primary">
+		<div class="container pos-vertical-center">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2>
+						<i class="icon--lg icon-lifesaver"></i>
+					</h2>
 					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'ageyecare' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'ageyecare' ); ?></p>
-				</div><!-- .page-content -->
-			</div><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+					<p>
+						The page you were attempting to visit doesn't exist.
+						<br> What now?
+						<a class="link-underline" href="index.html">Go back home</a> or
+						<a class="link-underline" href="#">Contact Us</a> if you think this might be a mistake.
+					</p>
+				</div>
+			</div>
+			
+		</div>
+		
+	</section>
+</div>
 
 <?php
 get_footer();

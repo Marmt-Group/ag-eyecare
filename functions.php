@@ -43,10 +43,20 @@ function ageyecare_styles() {
     wp_enqueue_style( 'ageyecare-font-poppins', 'http://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700' , array(), $version );
     wp_enqueue_style( 'ageyecare-style', get_template_directory_uri() . '/style.css' , array(), $version );
 
+    if (is_page( 'designer-frames' )) {
+        wp_enqueue_style( 'ageyecare-designer-frame-style', get_template_directory_uri() . '/styles/pages/designer-frames.css' , array(), $version );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
 
 /**
  * Customizer additions.
  */
+
+ function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
 // require get_template_directory() . '/inc/customizer.php';

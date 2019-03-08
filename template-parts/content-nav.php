@@ -16,14 +16,8 @@
         <div class="nav-bar nav--absolute nav--transparent bg--primary">
           <div class="col-md-4 text-center-xs">
             <div class="nav-module logo-module">
-              <a href="#"
-                ><div class="vnu">
-                  <svg
-                    id="logo"
-                    class="logo"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 296.9 39.8"
-                  >
+              <a href="/"><div class="vnu">
+                  <svg id="logo" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.9 39.8">
                     <style>
                       .st0 {
                         fill: #78787a;
@@ -47,72 +41,15 @@
                         fill="#00afa9"
                       />
                     </g>
-                  </svg></div
-              ></a>
-            </div>
-          </div>
-
-          <div
-            class="nav-module menu-module col-md-8 col-xs-12 text-right text-left-xs"
-          >
-            <ul class="menu">
-              <li>
-                <a href="#">Designer Frames</a>
-              </li>
-              <li class="has-dropdown">
-                <a href="#">Services</a>
-                <ul class="make-right">
-                  <li>
-                    <a href="#">Prescription Lenses</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact Lenses</a>
-                  </li>
-                  <li>
-                    <a href="#">Proficient Evaluation</a>
-                  </li>
-                  <li>
-                    <a href="#">Common Eye Diseases</a>
-                  </li>
-                  <li>
-                    <a href="#">Insurance</a>
-                  </li>
-                  <!-- <li class="has-dropdown">
-                    <a href="#">Second Level</a>
-                    <ul>
-                      <li>
-                        <a href="#">Single Link</a>
-                      </li>
-                      <li>
-                        <a href="#">Single Link</a>
-                      </li>
-                    </ul>
-                  </li> -->
-                </ul>
-              </li>
-              <li>
-                <a href="#">Shop</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#" style="font-weight: bold;">(214) 407-7399</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- <div class="col-md-2 text-right text-center-xs clearfix">
-            <div class="nav-module">
-              <a
-                class="btn btn--sm btn--white btn--unfilled"
-                href="#purchase-template"
-              >
-                <span class="btn__text">(214) 407-7399</span>
-                <i class="ion-arrow-right-c"></i>
+                  </svg>
+                </div>
               </a>
             </div>
-          </div> -->
+          </div>
+
+          <div class="nav-module menu-module col-md-8 col-xs-12 text-right text-left-xs">
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+          </div>
         </div>
 
         <div class="nav-mobile-toggle visible-sm visible-xs">
