@@ -1,3 +1,6 @@
+$md-screen: 767px;
+$lg-screen: 1024px;
+
 .container-header {
     background-image: url(../../img/large-9.jpg);
     background-repeat: no-repeat;
@@ -9,8 +12,34 @@
 
 .container-logos {
     padding: 4.6875em 0;
+    max-height: 1024px;
+    overflow-y: scroll;
+
     .container {width: 100%;}
-    
+    .partner-logos {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 15px;
+        margin: 0;
+
+        @media all and (min-width: $md-screen) {
+            grid-template-columns: auto auto;
+        }
+
+        @media all and (min-width: $lg-screen) {
+            grid-template-columns: auto auto auto;
+        }
+
+        img {
+           margin: 30px auto;
+           max-height: 80px;
+           opacity: 0;
+
+           &.show {
+               animation: fadeIn .5s linear 0s 1 forwards;
+           }
+        }
+    }
 }
 
 .boxed {
@@ -42,5 +71,15 @@
             margin-left: -13px;
             letter-spacing: -13px;
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

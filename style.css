@@ -5,9 +5,6 @@ Author: the WordPress team
 Description: AG Eyecare theme 2019.
 Version: 2.0
 Text Domain: ageyecare
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @font-face { font-family: socicon; src: url("./styles/fonts/socicon.eot"); src: url("./styles/fonts/socicon.eot?#iefix") format("embedded-opentype"), url("./styles/fonts/socicon.woff") format("woff"), url("./styles/fonts/socicon.woff2") format("woff2"), url("./styles/fonts/socicon.ttf") format("truetype"), url("./styles/fonts/socicon.svg#sociconregular") format("svg"); font-weight: 400; font-style: normal; text-transform: initial; }
 

@@ -30,6 +30,12 @@ function ageyecare_scripts() {
         wp_enqueue_script( 'ageyecare-mapbox', get_theme_file_uri( '/scripts/mapbox.js' ), array(), $version, true );
     }
 
+    if (is_page( 'designer-frames' ) || is_page('43678010234-2')) {
+        wp_enqueue_script( 'designer-frames-js', get_theme_file_uri( '/scripts/pages/designer-frames.js' ), array(), $version, true );
+        wp_enqueue_script( 'scrollmagic-js', get_theme_file_uri( '/scripts/ScrollMagic.min.js' ), array(), $version, true );
+
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_scripts' );
 
