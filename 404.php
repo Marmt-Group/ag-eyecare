@@ -24,7 +24,7 @@ get_header();
 					<p>
 						The page you were attempting to visit doesn't exist.
 						<br> What now?
-						<a class="link-underline" href="index.html">Go back home</a> or
+						<a class="link-underline" href="/">Go back home</a> or
 						<a class="link-underline" href="#">Contact Us</a> if you think this might be a mistake.
 					</p>
 				</div>
