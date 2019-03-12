@@ -10,11 +10,22 @@
 get_header();
 ?>
 
-<body <?php body_class('gradient--active'); ?>>
+<body <?php body_class(); ?>>
 
 <?php get_template_part( '/template-parts/content', 'nav' ); ?>
 
 <div class="main-container">
+        <section class="section-snippet-about-2 bg--secondary container-header imagebg" data-overlay="7">
+            <div class="container">
+                <div class="row pos-vertical-align-columns">
+                    <div class="col-sm-5 text-center">
+                        <h3>We care top luxury brands<br class="hidden-xs hidden-sm">in all shapes and sizes.</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo obcaecati id quis distinctio! Repellendus veniam provident ipsam est commodi ab, debitis dolor tempora, ducimus architecto doloremque, expedita adipisci molestiae eligendi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 		<section>
 		  <div class="container">
 		      <div class="row">

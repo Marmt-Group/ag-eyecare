@@ -5,8 +5,10 @@ $lg-screen: 1024px;
     background-image: url(../../img/large-9.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0,0,0,.5); // Tint color
+    background-color: rgba(0,140,116, .7); // Tint color
     background-blend-mode: multiply;
+    min-height: 728px;
+    max-height: 728px;
     padding-top: 7.8125em;
     transform: skewY(-4deg);
     transform-origin: top left;

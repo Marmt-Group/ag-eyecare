@@ -1,0 +1,17 @@
+$md-screen: 767px;
+$lg-screen: 1024px;
+
+.container-header {
+    background-image: url(../../img/large-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,140,116, .7); // Tint color
+    background-blend-mode: multiply;
+    min-height: 728px;
+    padding-top: 7.8125em;
+    transform: skewY(-4deg);
+    transform-origin: top left;
+    .container {
+        transform: skewY(4deg);
+    }
+}

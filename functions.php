@@ -53,6 +53,10 @@ function ageyecare_styles() {
         wp_enqueue_style( 'ageyecare-designer-frame-style', get_template_directory_uri() . '/styles/pages/designer-frames.css' , array(), $version );
     }
 
+    if (is_page( 'blog' ) || is_page('82328901239-2')) {
+        wp_enqueue_style( 'ageyecare-blog-style', get_template_directory_uri() . '/styles/pages/blog.css' , array(), $version );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
 
