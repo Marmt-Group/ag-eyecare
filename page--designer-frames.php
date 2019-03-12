@@ -64,15 +64,17 @@ get_header();
         </div>
     </section>
 
-    <section class="bg--primary">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                    Dolores itaque odit voluptatem unde provident quisquam molestias, <br>
-                    deserunt voluptates quae quidem maxime cupiditate nesciunt velit, <br>
-                    dignissimos, ad in vero placeat nobis.
-                </p>
+    <section class="container-summary bg--primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+                        Dolores itaque odit voluptatem unde provident quisquam molestias, <br>
+                        deserunt voluptates quae quidem maxime cupiditate nesciunt velit, <br>
+                        dignissimos, ad in vero placeat nobis.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
