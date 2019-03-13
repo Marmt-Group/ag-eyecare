@@ -32,4 +32,18 @@ $lg-screen: 1024px;
         }
         
     }
+    .post {
+        max-width: 900px;
+        margin: 0 auto;
+        
+        p {
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+        img {
+            &.alignleft {float: left; clear: left; margin: 10px 10px 20px 0;}
+            &.alignright {float: right; clear: right; margin: 10px 0 20px 10px;}
+        }
+    }
 }
