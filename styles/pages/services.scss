@@ -1,0 +1,12 @@
+.container-services-header {
+    margin-bottom: 100px;
+    overflow: hidden;
+    .background-image-holder {
+        background-image: url(../../img/large-13.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: rgba(0,140,116, .7) !important; // Tint color
+        background-blend-mode: multiply;
+        transform: skewY(-4deg);
+    }
+}

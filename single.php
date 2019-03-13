@@ -37,7 +37,7 @@ endwhile;
 
                 <hr>
                 <div class="text-center">
-                    <a href="#" class="btn">
+                    <a href="/blog" class="btn">
                         <span class="btn__text">
                             Back to all articles
                         </span>

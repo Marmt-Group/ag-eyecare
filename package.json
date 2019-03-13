@@ -15,6 +15,7 @@
         "build:style": "node-sass style.scss style.css --output-style compact && postcss -r style.css",
         "build:designerFrames": "node-sass styles/pages/designer-frames.scss styles/pages/designer-frames.css --output-style compressed && postcss -r styles/pages/designer-frames.css",
         "build:blog": "node-sass styles/pages/blog.scss styles/pages/blog.css --output-style compressed && postcss -r styles/pages/blog.css",
+        "build:services": "node-sass styles/pages/services.scss styles/pages/services.css --output-style compressed && postcss -r styles/pages/services.css",
         "build": "run-p \"build:*\"",
         "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
     }

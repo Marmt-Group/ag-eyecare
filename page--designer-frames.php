@@ -4,7 +4,7 @@
 *
 * @package WordPress
 * @subpackage AG_Eyecare
-* @since Twenty Fourteen 1.0
+* @since 1.0.0
 */
 
 get_header();
