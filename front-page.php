@@ -10,9 +10,6 @@
  */
 
 get_header();
-// require_once(get_template_directory() . "/classes/testing.php");
-// $message = new MyTest();
-// $message->printMessage();
 ?>
 
 <body <?php body_class('gradient--active'); ?>>

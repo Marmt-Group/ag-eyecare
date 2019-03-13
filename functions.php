@@ -57,6 +57,10 @@ function ageyecare_styles() {
         wp_enqueue_style( 'ageyecare-blog-style', get_template_directory_uri() . '/styles/pages/blog.css' , array(), $version );
     }
 
+    if (is_singular('post')) {
+        wp_enqueue_style( 'ageyecare-blog-style', get_template_directory_uri() . '/styles/pages/blog.css' , array(), $version );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
 
@@ -68,5 +72,8 @@ add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+// Enable post thumbnails
+add_theme_support( 'post-thumbnails' ); 
 
 // require get_template_directory() . '/inc/customizer.php';
