@@ -7,13 +7,21 @@ $lg-screen: 1024px;
     background-size: cover;
     background-color: rgba(0,140,116, .7); // Tint color
     background-blend-mode: multiply;
-    min-height: 728px;
-    padding-top: 8.8125em;
+    padding-top: 7.8125em;
     transform: skewY(-4deg);
     transform-origin: top left;
+
+    @media all and (min-width: $md-screen) {
+        min-height: 728px;
+        padding-top: 8.8125em;
+    }
+
     .container {
-        margin-top: 150px;
         transform: skewY(4deg);
+
+        @media all and (min-width: $md-screen) {
+            margin-top: 150px;
+        }
     }
 }
 

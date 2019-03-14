@@ -7,11 +7,14 @@ $lg-screen: 1024px;
     background-size: cover;
     background-color: rgba(0,140,116, .7); // Tint color
     background-blend-mode: multiply;
-    min-height: 728px;
-    max-height: 728px;
     padding-top: 7.8125em;
     transform: skewY(-4deg);
     transform-origin: top left;
+
+    @media all and (min-width: $md-screen) {
+        min-height: 728px;
+        max-height: 728px;
+    }
     .container {
         transform: skewY(4deg);
     }
@@ -65,11 +68,18 @@ $lg-screen: 1024px;
 }
 
 .boxed {
+    display: none;
     transform: skewX(-20deg);
     overflow: visible;
     border: solid 5px white;
+
+    @media all and (min-width: $md-screen) {
+        display: block;
+    }  
+
     .boxed-text {
-        transform: skewX(30deg);
+        transform: skewX(30deg); 
+
         span:nth-of-type(1) {
             font-style:italic;
             font-size: 200px;
@@ -93,6 +103,7 @@ $lg-screen: 1024px;
             margin-left: -13px;
             letter-spacing: -13px;
         }
+        
     }
 }
 

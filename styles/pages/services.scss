@@ -1,9 +1,16 @@
-.container-services-header {
-    min-height: 728px;
-    max-height: 728px;
+$md-screen: 767px;
+$lg-screen: 1024px;
+
+.container-services-header {  
     padding-top: 7.8125em;
     transform: skewY(-4deg);
     transform-origin: top left;
+
+    @media all and (min-width: $md-screen) {
+        min-height: 728px;
+        max-height: 728px;
+    }
+    
     > .container {
         transform: skewY(4deg);
     }
