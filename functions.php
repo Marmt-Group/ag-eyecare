@@ -36,6 +36,10 @@ function ageyecare_scripts() {
 
     }
 
+    if (is_page( 'services' ) || is_page('213402308304-2')) {
+        wp_enqueue_script( 'services-js', get_theme_file_uri( '/scripts/pages/services.js' ), array(), $version, true );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_scripts' );
 

@@ -1,6 +1,13 @@
 .container-services-header {
-    margin-bottom: 100px;
-    overflow: hidden;
+    min-height: 728px;
+    max-height: 728px;
+    padding-top: 7.8125em;
+    transform: skewY(-4deg);
+    transform-origin: top left;
+    > .container {
+        transform: skewY(4deg);
+    }
+
     .background-image-holder {
         background-image: url(../../img/large-13.jpg) !important;
         background-repeat: no-repeat !important;
@@ -8,5 +15,101 @@
         background-color: rgba(0,140,116, .7) !important; // Tint color
         background-blend-mode: multiply;
         transform: skewY(-4deg);
+    }
+}
+
+.container-equipment {
+   
+}
+
+.container-encyclopedia {
+    overflow-y: scroll;
+
+    &.hide-overflow {
+        overflow: hidden;
+    }
+
+    .background-image-holder {
+        background-image: url(../../img/about3.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: rgba(0,140,116, .7) !important; // Tint color
+        background-blend-mode: multiply;
+        transform: skewY(-4deg);
+    }
+
+    .boxed {
+        cursor: pointer;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content-reveal {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        margin: 0;
+
+        &.hidden {
+            top: 100%;
+            animation: revealDown .3s ease-in-out 0s 1 forwards;
+        }
+        &.show {
+            animation: revealUp .3s ease-in-out 0s 1 forwards;
+        }
+    }
+
+    .ion-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 30px;
+    }
+}
+
+.container-eco-frienldly {
+    transform: skewY(-4deg);
+    transform-origin: bottom left;
+    z-index: 10;
+    > .container {
+        transform: skewY(4deg);
+    }
+}
+
+.container-glasses {
+    background: #ffffff;
+    transform: skewY(-4deg);
+    transform-origin: bottom left;
+    > .container {
+        transform: skewY(4deg);
+    }
+
+    .tab__title {
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    blockquote {
+        font-size: 1em;
+    }
+}
+
+@keyframes revealUp {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes revealDown {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
     }
 }
