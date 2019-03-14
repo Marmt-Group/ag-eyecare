@@ -64,7 +64,7 @@ get_header();
         </div>
     </section>
 
-    <section class="container-summary bg--primary">
+    <section class="container-summary bg--primary add-glasses-3">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">

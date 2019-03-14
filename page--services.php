@@ -119,7 +119,7 @@ get_header();
         </div>
     </section>
 
-    <section class="section-team-small container-equipment">
+    <section class="section-team-small container-equipment add-glasses-1">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
