@@ -19,12 +19,20 @@ get_header();
         <div class="container">
             <div class="row pos-vertical-align-columns">
                 <div class="col-sm-5">
-                    <h3>We care top luxury brands<br class="hidden-xs hidden-sm">in all shapes and sizes.</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo obcaecati id quis distinctio! Repellendus veniam provident ipsam est commodi ab, debitis dolor tempora, ducimus architecto doloremque, expedita adipisci molestiae eligendi.</p>
-                    <a href="#" class="btn btn--white">
-                        <span class="btn__text">Start shopping now</span>
+                    <?php if( get_field('headline') ): ?>
+                        <?php the_field('headline'); ?>
+                    <?php endif; ?>
+
+                    <?php if( get_field('subheadline') ): ?>
+                        <?php the_field('subheadline'); ?>
+                    <?php endif; ?>
+
+                    <?php if( get_field('header_cta_url') ): ?>
+                    <a href="<?php the_field('header_cta_url'); ?>" class="btn btn--white">
+                        <span class="btn__text"><?php the_field('header_cta_text'); ?></span>
                         <i class="ion-arrow-right-c"></i>
                     </a>
+                    <?php endif; ?>
                 </div>
                 <div class="col-sm-6 col-md-push-1">
                     <div class="boxed imagebg text-center" data-overlay="3">
@@ -68,12 +76,9 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-                        Dolores itaque odit voluptatem unde provident quisquam molestias, <br>
-                        deserunt voluptates quae quidem maxime cupiditate nesciunt velit, <br>
-                        dignissimos, ad in vero placeat nobis.
-                    </p>
+                    <?php if( get_field('block_text_cta') ): ?>
+                        <?php the_field('block_text_cta'); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
