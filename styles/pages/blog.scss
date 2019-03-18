@@ -25,6 +25,20 @@ $lg-screen: 1024px;
     }
 }
 
+.sidebar {
+    .sidebar__element {
+        margin-bottom: 1em;
+    }
+    ol {list-style: decimal; line-height: unset !important;}
+}
+
+.news-article-snippet {
+    @media all and (min-width: $md-screen) {
+        height: 450px;
+        overflow: hidden;
+    }
+}
+
 .container-blog-single {
     padding-top: 0;
     .container-single-header {

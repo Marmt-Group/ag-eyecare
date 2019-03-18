@@ -9,7 +9,13 @@
 
 get_header();
 require_once(get_template_directory() . "/classes/class.blog.php");
+// Instantiate blog class
 $blog = new AgBlog();
+// Get blog posts
+global $post;
+$args = array( 'posts_per_page' => 10 );
+$lastposts = get_posts($args);
+$author = get_the_author();
 ?>
 
 <body <?php body_class(); ?>>
@@ -31,20 +37,40 @@ $blog = new AgBlog();
 		<section>
 		  <div class="container">
 		      <div class="row">
-		          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"> 
+              <div class="col-sm-12 col-md-3">
+		              <div class="sidebar">
+                  <h4>Recent Posts</h4>
+                  <hr>
+                  <ol>
+                  <?php 
+                    foreach ($lastposts as $post) :
+                    setup_postdata($post); 
+                    ?>
+                        <li class="sidebar__element">
+                            <a href="<?php the_permalink(); ?>">
+                              <h5>
+                                  <?php the_title(); ?>
+                              </h5>
+                            </a>
+                        </li>
+                    <?php 
+                    endforeach; 
+                    wp_reset_postdata(); 
+                  ?>
+                  </ol>
+
+		              </div>
+		          </div>
+
+		          <div class="col-md-9 col-sm-12"> 
 
                     <?php
-                    global $post;
-                    $args = array( 'posts_per_page' => 10 );
-                    $lastposts = get_posts($args);
-                    $author = get_the_author();
                     foreach ($lastposts as $post) :
                     setup_postdata($post); 
                     $catched_image = $blog->catch_that_image($post);;
                     ?>
 		
-		
-                      <a class="col-sm-12 news-article-link" href="<?php the_permalink(); ?>">
+                      <a class="col-sm-12 col-md-6 news-article-link" href="<?php the_permalink(); ?>">
                         <?php if (get_the_post_thumbnail($post_id) != ''): ?>
                             <div class="news-article-snippet boxed imagebg" data-scrim-bottom="9">
                                 <div class="background-image-holder">
