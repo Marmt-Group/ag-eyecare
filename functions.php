@@ -85,17 +85,34 @@ add_action( 'init', 'register_my_menu' );
 add_theme_support( 'post-thumbnails' ); 
 
 function create_post_type() {
-  register_post_type( 'ag_product',
+  register_post_type( 'product',
     array(
       'labels' => array(
         'name' => __( 'Products' ),
         'singular_name' => __( 'Product' )
       ),
+      'rewrite' => array('slug' => 'products','with_front' => false),
       'public' => true,
       'has_archive' => true,
+      'supports' => array('title'),
+      'menu_icon' => 'dashicons-products',
     )
   );
 }
 add_action( 'init', 'create_post_type' );
+
+function create_product_taxonomy() {
+
+    register_taxonomy(
+        'product-category',
+        'product',
+        array(
+            'label' => __( 'Category' ),
+            'rewrite' => array( 'slug' => 'product-category' ),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action( 'init', 'create_product_taxonomy' );
 
 // require get_template_directory() . '/inc/customizer.php';

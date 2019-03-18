@@ -11,6 +11,8 @@ $lg-screen: 1024px;
     transform: skewY(-4deg);
     transform-origin: top left;
 
+    .row .text-center {margin: 0 auto;}
+
     @media all and (min-width: $md-screen) {
         min-height: 728px;
         padding-top: 8.8125em;
@@ -29,7 +31,14 @@ $lg-screen: 1024px;
     .sidebar__element {
         margin-bottom: 1em;
     }
-    ol {list-style: decimal; line-height: unset !important;}
+    ol {
+        list-style: decimal; 
+        line-height: unset !important;
+        padding: 0 30px 15px;
+        @media all and (min-width: $md-screen) {
+            padding: 0;
+        }
+    }
 }
 
 .news-article-snippet {
