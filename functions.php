@@ -40,6 +40,12 @@ function ageyecare_scripts() {
         wp_enqueue_script( 'services-js', get_theme_file_uri( '/scripts/pages/services.js' ), array(), $version, true );
     }
 
+    if (is_page('30-day-contacts') || is_page('daily-contacts')) {
+        wp_enqueue_script( 'bootstrap-js', get_theme_file_uri( '/scripts/bootstrap.js' ), array(), $version, true );
+        wp_enqueue_script( 'shop-ajax-script', get_template_directory_uri() . '/scripts/pages/shop-product.js');
+        wp_localize_script( 'shop-ajax-script', 'shop_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_scripts' );
 
@@ -69,6 +75,10 @@ function ageyecare_styles() {
         wp_enqueue_style( 'ageyecare-blog-style', get_template_directory_uri() . '/styles/pages/services.css' , array(), $version );
     }
 
+    if (is_page('30-day-contacts') || is_page('daily-contacts')) {
+        wp_enqueue_style( 'ageyecare-shop-style', get_template_directory_uri() . '/styles/pages/shop.css' , array(), $version );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
 
@@ -91,7 +101,7 @@ function create_post_type() {
         'name' => __( 'Products' ),
         'singular_name' => __( 'Product' )
       ),
-      'rewrite' => array('slug' => 'products','with_front' => false),
+      'rewrite' => array('slug' => 'product','with_front' => false),
       'public' => true,
       'has_archive' => true,
       'supports' => array('title'),
@@ -108,11 +118,11 @@ function create_product_taxonomy() {
         'product',
         array(
             'label' => __( 'Category' ),
-            'rewrite' => array( 'slug' => 'product-category' ),
+            'rewrite' => array( 'slug' => 'product' ),
             'hierarchical' => true,
         )
     );
 }
 add_action( 'init', 'create_product_taxonomy' );
 
-// require get_template_directory() . '/inc/customizer.php';
+require_once(get_template_directory() . "/inc/ajax-product.php");

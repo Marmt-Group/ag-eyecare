@@ -1,0 +1,64 @@
+$md-screen: 767px;
+$lg-screen: 1024px;
+
+.container-shop {
+    .product-table {
+        margin-top: 50px;
+    }
+    table.variations {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 1em;
+
+        tr td {
+            border: 0;
+            padding: 0.857em 1.387em;
+            border-right: 1px dotted rgba(0, 0, 0, 0.1);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        select {
+            max-width: 100%;
+            height: auto;
+            line-height: normal;
+        }
+
+        option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0px 2px 1px;
+        }
+
+        label, .label {
+            color: #666666;
+            display: block;
+            font-size: 1em;
+            line-height: normal;
+        }
+    }
+
+    .modal {
+        .modal-dialog {
+            @media all and (min-width: $md-screen) {
+                width: $md-screen;
+            }
+
+            @media all and (min-width: $lg-screen) {
+                width: 900px;
+            }
+
+        }
+        .modal-body{
+            height: 600px;
+            overflow-y: scroll;
+        }
+        .modal-footer {
+            .btn {
+                margin: 0 15px;
+            }
+        }
+    }
+}
