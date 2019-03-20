@@ -15,6 +15,21 @@ get_header();
 <?php get_template_part( '/template-parts/content', 'nav' ); ?>
 		
 <div class="main-container">
+    <section class="section-snippet-about-2 bg--secondary container-header imagebg" data-overlay="7">
+        <div class="container">
+            <div class="row pos-vertical-align-columns">
+                <div class="col-sm-5 text-center">
+                    <?php if( get_field('header_text') ): ?>
+                        <?php the_field('header_text'); ?>
+                    <?php endif; ?>
+
+                    <?php if( get_field('subheader_text') ): ?>
+                        <p><?php the_field('subheader_text'); ?></p>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container">
             <div class="row">

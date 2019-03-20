@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    jQuery('#myModal').modal({ show: false })
-
     const displayModal = () => {
         jQuery('#myModal').modal('show');
+        jQuery('#form-body').show()
+        jQuery('#form-success').hide()
     }
 
     const buildHtml = (data) => {
@@ -69,9 +69,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (value.length > 0) {
             } else {
                 alert('All select fields need a value.')
-                break;
+                return;
             }
         }
+
+        const data = jQuery('#product-form').serializeArray()
+        const nonce = document.getElementById('purchaseSend').getAttribute('data-nonce')
+        document.getElementById('purchaseSend').classList.add('btn--loading')
+
+        let newDataSet = {}
+        // loop through data and reform
+        for (let item of data) {
+            newDataSet[item.name] = item.value
+        }
+        newDataSet.action = "post_purchase_email"
+        newDataSet.nonce = nonce
+
+        // Submit form 
+        jQuery.ajax({
+            type: "post",
+            dataType: "text",
+            url: shop_ajax_object.ajax_url,
+            data: newDataSet,
+            success: function (response) {
+                console.log(response)
+                // after successful submit
+                jQuery('#product-form')[0].reset()
+                // Show success
+                jQuery('#form-body').hide()
+                jQuery('#form-success').show()
+                // hide modal
+                setTimeout(() => {
+                    jQuery('#myModal').modal('hide');
+                }, 3000);
+            },
+            error: function (jqXHR, status, err) {
+                alert(err);
+            },
+            complete: function() {
+                document.getElementById('purchaseSend').classList.remove('btn--loading')
+            }
+        }) 
+
+        //TODO: wp_mail isn't working and need to show success message and let the user know they will be contacted soon
+        
 
         
     }

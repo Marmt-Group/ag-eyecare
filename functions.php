@@ -75,7 +75,7 @@ function ageyecare_styles() {
         wp_enqueue_style( 'ageyecare-blog-style', get_template_directory_uri() . '/styles/pages/services.css' , array(), $version );
     }
 
-    if (is_page('30-day-contacts') || is_page('daily-contacts')) {
+    if (is_page('30-day-contacts') || is_page('daily-contacts') || is_page('shop')) {
         wp_enqueue_style( 'ageyecare-shop-style', get_template_directory_uri() . '/styles/pages/shop.css' , array(), $version );
     }
 
@@ -125,4 +125,13 @@ function create_product_taxonomy() {
 }
 add_action( 'init', 'create_product_taxonomy' );
 
+// show wp_mail() errors
+add_action( 'wp_mail_failed', 'onMailError', 10, 1 );
+function onMailError( $wp_error ) {
+    echo "<pre>";
+    print_r($wp_error);
+    echo "</pre>";
+} 
+
 require_once(get_template_directory() . "/inc/ajax-product.php");
+require_once(get_template_directory() . "/inc/ajax-email.php");
