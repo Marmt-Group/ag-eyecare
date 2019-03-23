@@ -177,16 +177,6 @@ get_header();
                 </div>
             </div>
             </div>
-            <?php if ( get_field('optometry_guide_bottom_cta_url')): ?>
-                <div class="row">
-                <div class="col-sm-12 text-center">
-                    <a href="<?php the_field('optometry_guide_bottom_cta_url'); ?>" class="btn">
-                    <span class="btn__text"><?php the_field('optometry_guide_bottom_cta_text'); ?></span>
-                    <i class="ion-arrow-right-c"></i>
-                    </a>
-                </div>
-                </div>
-            <?php endif; ?>
         </div>
     </section>
 
@@ -215,10 +205,7 @@ get_header();
         <div class="container">
             <h6>
             Avant-Garde Optometry in Action -
-            <a href="https://www.instagram.com/avant_garde_optometry"
-                >View more on Instagram
-                <i class="icon socicon socicon-instagram"></i
-            ></a>
+            <a href="https://www.instagram.com/avant_garde_optometry" target="_blank">View more on Instagram <i class="icon socicon socicon-instagram"></i></a>
             </h6>
             <div id="instafeed" class="instafeed-list"></div>
         </div>
@@ -226,30 +213,7 @@ get_header();
 
     <div id="map"></div>
 
-    <section class="imagebg image--light gradient--bg-fade section-cta-bottom background--bottom add-glasses-2">
-        <div class="background-image-holder">
-            <img alt="image" src="<?php echo get_template_directory_uri() ?>/img/about2.jpg" />
-        </div>
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-12 text-center">
-                <?php if ( get_field('footer_cta_header')): ?>
-                    <h2><?php the_field('footer_cta_header'); ?></h2>
-                <?php endif; ?>
-                <?php if ( get_field('footer_cta_sub_header')): ?>
-                    <p><?php the_field('footer_cta_sub_header'); ?></p>
-                <?php endif; ?>
-
-                <?php if ( get_field('footer_cta_url')): ?>
-                    <a href="<?php the_field('footer_cta_url'); ?>" class="btn"><span class="btn__text"><?php the_field('footer_cta_url_text'); ?></span><i class="ion-arrow-right-c"></i></a>
-                <?php endif; ?>
-                
-                <a href="<?php the_field('footer_cta_secondary_url'); ?>" class="btn btn--transparent"><span class="btn__text"><?php the_field('footer_cta_secondary_url_text'); ?></span>
-                </a>
-            </div>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part( '/template-parts/content', 'booking' ); ?>
 
 </div>
 

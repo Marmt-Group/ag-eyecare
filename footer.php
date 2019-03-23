@@ -41,15 +41,15 @@
         </svg>
 
         <div class="inline-block">
-        <span class="block">(214) 407-7399<br /></span>
+        <span class="block"><a href="tel:+12144077399">(214) 407-7399</a><br /></span>
         <a href="#" class="link-underline">hello@ag-eyecare.com</a>
         </div>
     </div>
 
     <div class="col-sm-4">
-        <p>
-        <b>Avant-Garde Optometry<br /></b>9255 Dallas Parkway<br />Frisco,
-        TX 75034<br />
+        <p><b>Avant-Garde Optometry</b><br />
+        <a href="https://www.google.com/maps?ll=33.153966,-96.841158&z=17&t=m&hl=en-US&gl=US&mapclient=embed&cid=1954368608753036615" target="_blank">9255 Dallas Parkway<br />Frisco,
+        TX 75034</a><br />
         </p>
     </div>
 
@@ -59,28 +59,28 @@
         </p>
         <ul>
         <li>
-            <a href="#">
+            <a href="https://twitter.com/ageyecare" target="_blank">
             <div class="icon--circle">
                 <i class="icon socicon socicon-twitter"></i>
             </div>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="https://www.facebook.com/FriscoOptometrist" target="_blank">
             <div class="icon--circle">
                 <i class="icon socicon socicon-facebook"></i>
             </div>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="https://www.instagram.com/avant_garde_optometry/" target="_blank">
             <div class="icon--circle">
                 <i class="icon socicon socicon-instagram"></i>
             </div>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="https://www.pinterest.com/avantgardeopto/" target="_blank">
             <div class="icon--circle">
                 <i class="icon socicon socicon-pinterest"></i>
             </div>
@@ -98,12 +98,12 @@
             Reserved.</span
         >
         </div>
-        <div class="col-sm-6 text-right text-center-xs">
+        <!-- <div class="col-sm-6 text-right text-center-xs">
         <a href="#" class="link-underline">
             Terms Of Use
         </a>
         <span>ABN: 0803773261</span>
-        </div>
+        </div> -->
     </div>
     </div>
 </div>

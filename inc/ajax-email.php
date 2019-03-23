@@ -13,6 +13,7 @@ function post_purchase_email() {
 
       $name = $_REQUEST['name'];
       $email = $_REQUEST['email'];
+      $result['product'] = $_REQUEST['product'];
       $result['attribute_left-eye'] = $_REQUEST['attribute_left-eye'];
       $result['attribute_test1'] = $_REQUEST['attribute_test1'];
       $result['attribute_test2'] = $_REQUEST['attribute_test2'];
@@ -29,12 +30,20 @@ function post_purchase_email() {
       $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
       $headers .= "From: $name <$email> \r\n";
       $headers .= "Reply-To: $email \r\n";
-      
-      if( wp_mail($to, $subject, $body, $headers) ){
-          echo "mail sent";
-      } else {
-          exit("Mail not sent.");
+
+      wp_mail($to, $subject, $body, $headers);
+
+      if(!$phpmailer ->Send()) {
+          echo 'Message could not be sent.';
+          echo 'Mailer Error: ' . $phpmailer->ErrorInfo;
+          exit;
       }
+      
+      // if( wp_mail($to, $subject, $body, $headers) ){
+      //     echo "mail sent";
+      // } else {
+      //     exit("Mail not sent.");
+      // }
    }
 
    die();

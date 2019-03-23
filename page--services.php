@@ -215,33 +215,9 @@ get_header();
 
 			</div>
         </section>
-        
-        <section class="imagebg image--light gradient--bg-fade section-cta-bottom background--bottom">
-            <div class="background-image-holder">
-                <img alt="image" src="<?php echo get_template_directory_uri() ?>/img/about2.jpg" />
-            </div>
-            <div class="container">
-                <div class="row">
-                <div class="col-sm-12 text-center">
-                <h2>
-                    Ready to see beyond the clouds?
-                </h2>
-                <p>
-                    Optometry services and much more - speak to an Avant-Garde
-                    associate today.
-                </p>
-                <a href="#" class="btn"
-                    ><span class="btn__text">Book a consultation</span
-                    ><i class="ion-arrow-right-c"></i
-                ></a>
-                <a href="#" class="btn btn--transparent"
-                    ><span class="btn__text">Explore our services</span>
-                </a>
-                </div>
-                </div>
-            </div>
-        </section>
 
+        <?php get_template_part( '/template-parts/content', 'booking' ); ?>
+        
 </div>
 
 

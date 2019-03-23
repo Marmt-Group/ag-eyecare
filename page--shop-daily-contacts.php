@@ -51,6 +51,7 @@ $nonce_email = wp_create_nonce("post_purchase_email_nonce");
                     if ($query->have_posts()): 
                     while ( $query->have_posts() ) : $query->the_post();
                     $postid = get_the_ID();
+                    $clean_title = str_replace(' ', '%20', get_the_title());
                 ?>
                         <div class="col-sm-6 col-md-4">
                             <?php if( get_field('thumbnail_image') ): ?>
@@ -58,7 +59,7 @@ $nonce_email = wp_create_nonce("post_purchase_email_nonce");
                             <?php endif; ?>
                             
                             <div class="pricing-option boxed boxed--sm bg--white text-center">
-                                <h6><?php the_title() ?></h6>
+                                <h6 class="product-title" data-title="<?php echo $clean_title; ?>"><?php the_title(); ?></h6>
                                 <div class="pricing-option__price">
                                     <?php if( get_field('price') ): ?>
                                         <span>$</span>
@@ -69,11 +70,8 @@ $nonce_email = wp_create_nonce("post_purchase_email_nonce");
                                 <?php if( get_field('short_description') ): ?>
                                     <p><?php the_field('short_description'); ?></p>
                                 <?php endif; ?>
-                                <?php 
-                                    $clean_title = str_replace(' ', '%20', get_the_title());
-                                ?>
                                 <div>
-                                    <span class="type--fine-print">or <a class="link-underline" href="mailto:me@mysite.com&subject=Purchase%20Inquiry%20for%20<?php echo $clean_title; ?>">Get in touch</a> for more info
+                                    <span class="type--fine-print">or <a class="link-underline" href="mailto:hello@ag-eyecare.com&subject=Purchase%20Inquiry%20for%20<?php echo $clean_title; ?>">Get in touch</a> for more info
                                     </span>
                                 </div>
                             </div>
@@ -182,7 +180,7 @@ $nonce_email = wp_create_nonce("post_purchase_email_nonce");
             </div>
             
         </div>
-    </section>
+    </section>    
 </div>
 
 <?php

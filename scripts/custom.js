@@ -84,9 +84,7 @@ var token = '312076064.1677ed0.666b99aa3cd346d4916619e63ac862f0',
 window.instafeedProcessResult = function(data) {
   for (x in data.data) {
     container.innerHTML +=
-      '<div class="instafeed-item-container"><div class="instafeed-item" style="background-image: url(' +
-      data.data[x].images.standard_resolution.url +
-      ');"></div></div>';
+      `<div class="instafeed-item-container"><div class="instafeed-item" style="background-image: url(${data.data[x].images.standard_resolution.url});"></div></div>`;
   }
 };
 

@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const data = jQuery('#product-form').serializeArray()
         const nonce = document.getElementById('purchaseSend').getAttribute('data-nonce')
+        const product = document.querySelector('.product-title').getAttribute('data-title')
         document.getElementById('purchaseSend').classList.add('btn--loading')
 
         let newDataSet = {}
@@ -82,8 +83,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         for (let item of data) {
             newDataSet[item.name] = item.value
         }
+        newDataSet.product = product
         newDataSet.action = "post_purchase_email"
         newDataSet.nonce = nonce
+
 
         // Submit form 
         jQuery.ajax({

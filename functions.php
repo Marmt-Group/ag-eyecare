@@ -21,7 +21,7 @@ function ageyecare_scripts() {
 
     wp_enqueue_script( 'ageyecare-jquery', get_theme_file_uri( '/scripts/jquery-2.1.4.min.js' ), array(), $version, true );
     wp_enqueue_script( 'ageyecare-flexslider', get_theme_file_uri( '/scripts/flexslider.min.js' ), array(), $version, true );
-    wp_enqueue_script( 'ageyecare-scripts', get_theme_file_uri( '/scripts/scripts.js' ), array(), $version, true );
+    wp_enqueue_script( 'ageyecare-scripts', get_theme_file_uri( '/js/scripts.min.js' ), array(), $version, true );
     wp_enqueue_script( 'ageyecare-custom', get_theme_file_uri( '/scripts/custom.js' ), array(), $version, true );
 
     if( is_front_page() ) {
@@ -125,13 +125,19 @@ function create_product_taxonomy() {
 }
 add_action( 'init', 'create_product_taxonomy' );
 
-// show wp_mail() errors
-add_action( 'wp_mail_failed', 'onMailError', 10, 1 );
-function onMailError( $wp_error ) {
-    echo "<pre>";
-    print_r($wp_error);
-    echo "</pre>";
-} 
+//TODO: set the credentials below
+add_action( 'phpmailer_init', 'configure_smtp' );
+function configure_smtp( PHPMailer $phpmailer ){
+    $phpmailer->isSMTP(); //switch to smtp
+    $phpmailer->Host = 'mail.mydomain.com';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 25;
+    $phpmailer->Username = 'Username Here';
+    $phpmailer->Password = 'myemailpassword';
+    $phpmailer->SMTPSecure = false;
+    $phpmailer->From = 'From Email Here';
+    $phpmailer->FromName='Sender Name';
+}
 
 require_once(get_template_directory() . "/inc/ajax-product.php");
 require_once(get_template_directory() . "/inc/ajax-email.php");
