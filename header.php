@@ -14,6 +14,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta http-equiv="refresh" content="14400" /> <!-- refresh browser every 4 hours, particular for the insta feed page --> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
