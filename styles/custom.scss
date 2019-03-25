@@ -199,6 +199,21 @@ footer svg#logo {
   transition: all 300ms ease;
 }
 
+.section-instafeed.instafeed-page {
+  background: transparent;
+  height: 100%;
+  transform: skewY(0deg);
+}
+
+.section-instafeed.instafeed-page .container {
+  transform: skewX(-4deg);
+}
+
+.section-instafeed.instafeed-page .instafeed-list .instafeed-item-container {
+  border: none;
+  height: auto;
+}
+
 #map {
   position: relative;
   overflow: hidden;

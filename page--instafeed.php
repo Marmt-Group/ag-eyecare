@@ -11,15 +11,11 @@
 get_header();
 ?>
 
-<body <?php body_class(); ?> style="background: #242A2D;">
+<body <?php body_class('bg--primary'); ?> style="height: 100%;">
 
 <div class="main-container">
-    <section class="section-instafeed">
+    <section class="section-instafeed instafeed-page">
         <div class="container">
-            <h6>
-            Avant-Garde Optometry in Action -
-            <a href="https://www.instagram.com/avant_garde_optometry" target="_blank">View more on Instagram <i class="icon socicon socicon-instagram"></i></a>
-            </h6>
             <div id="instafeed" class="instafeed-list"></div>
         </div>
     </section>

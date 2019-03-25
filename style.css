@@ -5987,6 +5987,12 @@ footer svg#logo { display: inline-block; vertical-align: middle; width: 80px; ma
 
 .section-instafeed .instafeed-list .instafeed-item { position: relative; transform-origin: top right; width: 100%; height: 110%; background-repeat: no-repeat; background-position: center center; background-size: cover; transform: skewY(4deg); transition: all 300ms ease; }
 
+.section-instafeed.instafeed-page { background: transparent; height: 100%; transform: skewY(0deg); }
+
+.section-instafeed.instafeed-page .container { transform: skewX(-4deg); }
+
+.section-instafeed.instafeed-page .instafeed-list .instafeed-item-container { border: none; height: auto; }
+
 #map { position: relative; overflow: hidden; width: 100%; height: 500px; transform: skewY(-4deg); transform-origin: bottom left; }
 
 #map .marker { background-image: url("./img/mapbox-icon.png"); background-size: cover; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transform: skewY(4deg); }

@@ -7,11 +7,11 @@ tag.src = 'https://www.youtube.com/iframe_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var videoID = $('.tv').data('video-id');
-var videoStart = $('.tv').data('video-start');
-var videoEnd = $('.tv').data('video-end');
-var videoWidthAdd = $('.tv').data('video-width-add');
-var videoHeightAdd = $('.tv').data('video-height-add');
+var videoID = jQuery('.tv').data('video-id');
+var videoStart = jQuery('.tv').data('video-start');
+var videoEnd = jQuery('.tv').data('video-end');
+var videoWidthAdd = jQuery('.tv').data('video-width-add');
+var videoHeightAdd = jQuery('.tv').data('video-height-add');
 
 var tv;
 
@@ -34,72 +34,54 @@ var vid = {
   suggestedQuality: 'hd720',
 };
 
-function onYouTubePlayerAPIReady() {
+var onYouTubePlayerAPIReady = function() {
   tv = new YT.Player('tv', {
     events: { onReady: onPlayerReady, onStateChange: onPlayerStateChange },
     playerVars: playerDefaults,
   });
 }
 
-function onPlayerReady() {
+var onPlayerReady = function() {
   tv.loadVideoById(vid);
   tv.mute();
 }
 
-function onPlayerStateChange(e) {
+var onPlayerStateChange = function (e) {
   if (e.data === 1) {
-    $('#tv').addClass('active');
+    document.getElementById('tv').classList.add('active');
   } else if (e.data === 0) {
     tv.seekTo(vid.startSeconds);
   }
 }
 
-// function vidRescale() {
-//   var w = $(window).width() + videoWidthAdd,
-//     h = $(window).height() + videoHeightAdd;
-//   if (w / h > 16 / 9) {
-//     console.log('if: w / h > 16 / 9');
-//     console.log(w, (w / 16) * 9);
-//     tv.setSize(w, (w / 16) * 9);
-//     // $('.tv .screen').css({ left: '0px' });
-//   } else {
-//     console.log('else');
-//     console.log((h / 9) * 16, h);
-//     tv.setSize((h / 9) * 16, h);
-//     // $('.tv .screen').css({ left: -($('.tv .screen').outerWidth() - w) / 2 });
-//   }
-// }
+// Instagram Feed Home Page
 
-// $(window).on('load resize', function() {
-//   vidRescale();
-// });
+var startYTVideo = function() {
+  var token = '312076064.1677ed0.666b99aa3cd346d4916619e63ac862f0',
+    num_photos = 9, // maximum 20
+    container = document.getElementById('instafeed'), // it is our <ul id="rudr_instafeed">
+    scrElement = document.createElement('script');
 
-// Instagram Feed
+  window.instafeedProcessResult = function (data) {
+    for (x in data.data) {
+      container.innerHTML +=
+        `<div class="instafeed-item-container"><img class="instafeed-item" src="${data.data[x].images.standard_resolution.url}"></div>`;
+    }
+  };
 
-var token = '312076064.1677ed0.666b99aa3cd346d4916619e63ac862f0',
-  num_photos = 9, // maximum 20
-  container = document.getElementById('instafeed'), // it is our <ul id="rudr_instafeed">
-  scrElement = document.createElement('script');
-
-window.instafeedProcessResult = function(data) {
-  for (x in data.data) {
-    container.innerHTML +=
-      `<div class="instafeed-item-container"><div class="instafeed-item" style="background-image: url(${data.data[x].images.standard_resolution.url});"></div></div>`;
-  }
-};
-
-scrElement.setAttribute(
-  'src',
-  'https://api.instagram.com/v1/users/self/media/recent?access_token=' +
+  scrElement.setAttribute(
+    'src',
+    'https://api.instagram.com/v1/users/self/media/recent?access_token=' +
     token +
     '&count=' +
     num_photos +
     '&callback=instafeedProcessResult'
-);
-document.body.appendChild(scrElement);
+  );
+  document.body.appendChild(scrElement);
+}
 
-(function($) {
-  $(document).ready(function() {
-    // do something
-  });
-})(jQuery);
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (document.getElementById('instafeed')) {
+    startYTVideo()
+  }
+})
