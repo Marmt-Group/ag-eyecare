@@ -91,7 +91,7 @@ var startInstaFeedSlider = function() {
       container.innerHTML +=
         `<li class="imagebg" data-overlay="5" style="height: 80vh; padding: 0;">
             <div class="background-image-holder" style="opacity: 1;">
-            <img src="${data.data[x].images.standard_resolution.url}" style="width: 100%; transform: translateY(-5%);">
+            <img src="${data.data[x].images.standard_resolution.url}" style="width: 100%; transform: translateY(-5%); display: block;">
             </div>
             <div class="container" style="top: 20%;">
                   <div class="row">
