@@ -47,6 +47,31 @@ get_header();
         </div>
     </section>
 
+    <section class="section-snippet-about-2 bg--secondary container-logos">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 style="margin:1.5em 0 0;font-size:2em;">Top brands include:</h3>
+                    <div class="partner-logos">
+                        <img alt="Coach prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/Coach_New_Logo.svg">
+                        <img alt="Gucci prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/Gucci_logo.svg">
+                        <img alt="Lacoste prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/lacoste-1-logo-svg-vector.svg">
+                        <img alt="Ray Ban prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/ray-ban-logo-svg-vector.svg">
+                        <img alt="Tiffany & Co prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/Tiffany_Logo.svg">
+                        <img alt="Persol prescription & sunglasses" src="<?php echo get_template_directory_uri() ?>/img/Persol_logo.svg">
+                        <img alt="Prada prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Prada-Logo.svg">
+                        <img alt="Dolce and Gabbana prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Dolce_and_Gabbana.svg">
+                        <img alt="Versace prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Versace_logo.svg">
+                        <img alt="Burberry prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Burberry_Logo.svg">
+                        <img alt="Bulgari prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Bulgari_logo.svg">
+                        <img alt="Fendi prescription & sunglasses" src="<?php echo get_template_directory_uri()  ?>/img/Fendi_logo.svg">
+                    </div>
+                    <h3 style="margin:1.5em 0 0;font-size:1em;">and many more</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-hero-3 section--card container-slider">
         <div class="container">
             <div class="row">
