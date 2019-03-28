@@ -20,8 +20,11 @@ get_header();
     </div>
         <div class="container">
             <div class="row">
+            <div class="col-sm-12 text-center">
+             <h2 style="margin-bottom: 40px;">Avant-Garde Optometry on Instagram</h2>
+            </div>
                 <div class="col-sm-12">
-                    <div class="slider box-shadow" data-animation="slide" data-arrows="false" data-timing="5000">
+                    <div class="slider box-shadow text-center" data-animation="slide" data-arrows="false" data-timing="5000">
                         <ul id="instafeed-slides" class="slides"></ul>
                     </div>
                 </div>
