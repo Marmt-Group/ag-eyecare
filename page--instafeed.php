@@ -15,6 +15,9 @@ get_header();
 
 <div class="main-container">
     <section class="section-hero-3 section--card section-instafeed instafeed-page">
+    <div class="background-image-holder" style="background: url(&quot;https://wordpress-72542-741704.cloudwaysapps.com/wp-content/themes/ag-eyecare/img/about2.jpg&quot;); opacity: 1;">
+        <img alt="image" src="https://wordpress-72542-741704.cloudwaysapps.com/wp-content/themes/ag-eyecare/img/about2.jpg">
+    </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
