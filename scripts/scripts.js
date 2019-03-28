@@ -1155,8 +1155,6 @@ mr = (function (mr, $, window, document){
     var documentReady = function($){
         
         $('.slider').each(function(){
-            console.log($);
-            console.log($(this));
             var slider = $(this);
             var arrows = false;
             var sliderAnimation = 'fade';

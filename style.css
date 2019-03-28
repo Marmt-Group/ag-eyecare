@@ -4208,8 +4208,6 @@ p + img, img:last-child { margin-bottom: 0; }
 
 .image--light .background-image-holder { background: none; }
 
-.background-image-holder img { display: none; }
-
 [data-overlay] { position: relative; }
 
 [data-overlay]:before { position: absolute; content: ''; background: #242a2d; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; }

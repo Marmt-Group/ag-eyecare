@@ -21,8 +21,8 @@ function ageyecare_scripts() {
 
     wp_enqueue_script( 'ageyecare-jquery', get_theme_file_uri( '/scripts/jquery-2.1.4.min.js' ), array(), $version, true );
     wp_enqueue_script( 'ageyecare-flexslider', get_theme_file_uri( '/scripts/flexslider.min.js' ), array(), $version, true );
-    wp_enqueue_script( 'ageyecare-scripts', get_theme_file_uri( '/js/scripts.min.js' ), array(), $version, true );
     wp_enqueue_script( 'ageyecare-custom', get_theme_file_uri( '/scripts/custom.js' ), array(), $version, true );
+    wp_enqueue_script( 'ageyecare-scripts', get_theme_file_uri( '/js/scripts.min.js' ), array(), $version, true );
 
     if( is_front_page() ) {
         wp_enqueue_style( 'ageyecare-mapbox-style', 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' , array(), $version );
