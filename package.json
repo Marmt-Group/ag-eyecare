@@ -17,6 +17,7 @@
         "build:blog": "node-sass styles/pages/blog.scss styles/pages/blog.css --output-style compressed && postcss -r styles/pages/blog.css",
         "build:services": "node-sass styles/pages/services.scss styles/pages/services.css --output-style compressed && postcss -r styles/pages/services.css",
         "build:shop": "node-sass styles/pages/shop.scss styles/pages/shop.css --output-style compressed && postcss -r styles/pages/shop.css",
+        "build:contact": "node-sass styles/pages/contact.scss styles/pages/contact.css --output-style compressed && postcss -r styles/pages/contact.css",
         "build": "run-p \"build:*\"",
         "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
     }

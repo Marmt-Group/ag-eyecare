@@ -79,6 +79,10 @@ function ageyecare_styles() {
         wp_enqueue_style( 'ageyecare-shop-style', get_template_directory_uri() . '/styles/pages/shop.css' , array(), $version );
     }
 
+    if (is_page('contact')) {
+        wp_enqueue_style( 'ageyecare-contact-style', get_template_directory_uri() . '/styles/pages/contact.css' , array(), $version );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'ageyecare_styles' );
 

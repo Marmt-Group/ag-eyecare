@@ -1,0 +1,37 @@
+$md-screen: 767px;
+$lg-screen: 1024px;
+
+.container-header {
+    background-image: url(../../img/large-15.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,140,116, .7); // Tint color
+    background-blend-mode: multiply;
+    padding-top: 7.8125em;
+    transform: skewY(-4deg);
+    transform-origin: top left;
+
+    .row .text-center {margin: 0 auto;}
+
+    @media all and (min-width: $md-screen) {
+        min-height: 728px;
+        padding-top: 8.8125em;
+    }
+
+    .container {
+        transform: skewY(4deg);
+
+        @media all and (min-width: $md-screen) {
+            margin-top: 150px;
+        }
+    }
+}
+
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.nf-form-fields-required {
+    visibility: hidden;
+}
