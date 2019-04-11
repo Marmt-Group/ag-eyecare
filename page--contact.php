@@ -32,7 +32,7 @@ get_header();
                 <div class="col-sm-12 col-md-8 centered">
                     <!-- <h6 class="text-center">Send An Inquiry</h6>
                     <hr> -->
-                    <?php echo do_shortcode('[ninja_form id=1]'); ?>
+                    <?php echo do_shortcode('[ninja_form id=2]'); ?>
                 </div>
             </div>
             
